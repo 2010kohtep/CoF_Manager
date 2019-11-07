@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{C109DF9E-E215-42ED-ADE3-F6E50319A6EB}</ProjectGuid>
+    <RootNamespace>CoFAddonManager</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CoF_Manager</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>CrashRpt</TargetName>
+    <OutDir>$(ProjectDir)..\bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\bin\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>CrashRpt</TargetName>
+    <OutDir>$(ProjectDir)..\bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\bin\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src\;$(ProjectDir)..\src\shared\hlsdk\extended;$(ProjectDir)..\src\shared\hlsdk\extended\tier0;$(ProjectDir)..\src\shared\hlsdk\cl_dll;$(ProjectDir)..\src\shared\hlsdk\cl_dll\hl;$(ProjectDir)..\src\shared\hlsdk\common;$(ProjectDir)..\src\shared\hlsdk\dlls;$(ProjectDir)..\src\shared\hlsdk\dlls\wpn_shared;$(ProjectDir)..\src\shared\hlsdk\dmc;$(ProjectDir)..\src\shared\hlsdk\dmc\cl_dll;$(ProjectDir)..\src\shared\hlsdk\dmc\cl_dll\quake;$(ProjectDir)..\src\shared\hlsdk\dmc\dlls;$(ProjectDir)..\src\shared\hlsdk\dmc\pm_shared;$(ProjectDir)..\src\shared\hlsdk\engine;$(ProjectDir)..\src\shared\hlsdk\external;$(ProjectDir)..\src\shared\hlsdk\external\SDL2;$(ProjectDir)..\src\shared\hlsdk\game_shared;$(ProjectDir)..\src\shared\hlsdk\game_shared\bot;$(ProjectDir)..\src\shared\hlsdk\lib;$(ProjectDir)..\src\shared\hlsdk\lib\public;$(ProjectDir)..\src\shared\hlsdk\linux;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM\Contents;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM\Contents\Resources;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM\Contents\Resources\DWARF;$(ProjectDir)..\src\shared\hlsdk\linux\release;$(ProjectDir)..\src\shared\hlsdk\network;$(ProjectDir)..\src\shared\hlsdk\pm_shared;$(ProjectDir)..\src\shared\hlsdk\projects;$(ProjectDir)..\src\shared\hlsdk\projects\vs2010;$(ProjectDir)..\src\shared\hlsdk\public;$(ProjectDir)..\src\shared\hlsdk\public\cl_dll;$(ProjectDir)..\src\shared\hlsdk\public\steam;$(ProjectDir)..\src\shared\hlsdk\ricochet;$(ProjectDir)..\src\shared\hlsdk\ricochet\cl_dll;$(ProjectDir)..\src\shared\hlsdk\ricochet\cl_dll\hl;$(ProjectDir)..\src\shared\hlsdk\ricochet\dlls;$(ProjectDir)..\src\shared\hlsdk\ricochet\dlls\wpn_shared;$(ProjectDir)..\src\shared\hlsdk\ricochet\pm_shared;$(ProjectDir)..\src\shared\hlsdk\utils;$(ProjectDir)..\src\shared\hlsdk\utils\bspinfo;$(ProjectDir)..\src\shared\hlsdk\utils\common;$(ProjectDir)..\src\shared\hlsdk\utils\light;$(ProjectDir)..\src\shared\hlsdk\utils\light\new;$(ProjectDir)..\src\shared\hlsdk\utils\makefont;$(ProjectDir)..\src\shared\hlsdk\utils\makels;$(ProjectDir)..\src\shared\hlsdk\utils\mdlviewer;$(ProjectDir)..\src\shared\hlsdk\utils\mkmovie;$(ProjectDir)..\src\shared\hlsdk\utils\procinfo;$(ProjectDir)..\src\shared\hlsdk\utils\procinfo\lib;$(ProjectDir)..\src\shared\hlsdk\utils\procinfo\lib\win32_vc6;$(ProjectDir)..\src\shared\hlsdk\utils\qbsp2;$(ProjectDir)..\src\shared\hlsdk\utils\qcsg;$(ProjectDir)..\src\shared\hlsdk\utils\qlumpy;$(ProjectDir)..\src\shared\hlsdk\utils\qrad;$(ProjectDir)..\src\shared\hlsdk\utils\serverctrl;$(ProjectDir)..\src\shared\hlsdk\utils\serverctrl\res;$(ProjectDir)..\src\shared\hlsdk\utils\smdlexp;$(ProjectDir)..\src\shared\hlsdk\utils\sprgen;$(ProjectDir)..\src\shared\hlsdk\utils\studiomdl;$(ProjectDir)..\src\shared\hlsdk\utils\vgui;$(ProjectDir)..\src\shared\hlsdk\utils\vgui\include;$(ProjectDir)..\src\shared\hlsdk\utils\vgui\lib;$(ProjectDir)..\src\shared\hlsdk\utils\vgui\lib\win32_vc6;$(ProjectDir)..\src\shared\hlsdk\utils\visx2;$(ProjectDir)..\src\shared\hlsdk\utils\xwad;$(ProjectDir)..\src\shared\hlsdk\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src\;$(ProjectDir)..\src\shared\hlsdk\extended;$(ProjectDir)..\src\shared\hlsdk\extended\tier0;$(ProjectDir)..\src\shared\hlsdk\cl_dll;$(ProjectDir)..\src\shared\hlsdk\cl_dll\hl;$(ProjectDir)..\src\shared\hlsdk\common;$(ProjectDir)..\src\shared\hlsdk\dlls;$(ProjectDir)..\src\shared\hlsdk\dlls\wpn_shared;$(ProjectDir)..\src\shared\hlsdk\dmc;$(ProjectDir)..\src\shared\hlsdk\dmc\cl_dll;$(ProjectDir)..\src\shared\hlsdk\dmc\cl_dll\quake;$(ProjectDir)..\src\shared\hlsdk\dmc\dlls;$(ProjectDir)..\src\shared\hlsdk\dmc\pm_shared;$(ProjectDir)..\src\shared\hlsdk\engine;$(ProjectDir)..\src\shared\hlsdk\external;$(ProjectDir)..\src\shared\hlsdk\external\SDL2;$(ProjectDir)..\src\shared\hlsdk\game_shared;$(ProjectDir)..\src\shared\hlsdk\game_shared\bot;$(ProjectDir)..\src\shared\hlsdk\lib;$(ProjectDir)..\src\shared\hlsdk\lib\public;$(ProjectDir)..\src\shared\hlsdk\linux;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM\Contents;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM\Contents\Resources;$(ProjectDir)..\src\shared\hlsdk\linux\libSDL2-2.0.0.dylib.dSYM\Contents\Resources\DWARF;$(ProjectDir)..\src\shared\hlsdk\linux\release;$(ProjectDir)..\src\shared\hlsdk\network;$(ProjectDir)..\src\shared\hlsdk\pm_shared;$(ProjectDir)..\src\shared\hlsdk\projects;$(ProjectDir)..\src\shared\hlsdk\projects\vs2010;$(ProjectDir)..\src\shared\hlsdk\public;$(ProjectDir)..\src\shared\hlsdk\public\cl_dll;$(ProjectDir)..\src\shared\hlsdk\public\steam;$(ProjectDir)..\src\shared\hlsdk\ricochet;$(ProjectDir)..\src\shared\hlsdk\ricochet\cl_dll;$(ProjectDir)..\src\shared\hlsdk\ricochet\cl_dll\hl;$(ProjectDir)..\src\shared\hlsdk\ricochet\dlls;$(ProjectDir)..\src\shared\hlsdk\ricochet\dlls\wpn_shared;$(ProjectDir)..\src\shared\hlsdk\ricochet\pm_shared;$(ProjectDir)..\src\shared\hlsdk\utils;$(ProjectDir)..\src\shared\hlsdk\utils\bspinfo;$(ProjectDir)..\src\shared\hlsdk\utils\common;$(ProjectDir)..\src\shared\hlsdk\utils\light;$(ProjectDir)..\src\shared\hlsdk\utils\light\new;$(ProjectDir)..\src\shared\hlsdk\utils\makefont;$(ProjectDir)..\src\shared\hlsdk\utils\makels;$(ProjectDir)..\src\shared\hlsdk\utils\mdlviewer;$(ProjectDir)..\src\shared\hlsdk\utils\mkmovie;$(ProjectDir)..\src\shared\hlsdk\utils\procinfo;$(ProjectDir)..\src\shared\hlsdk\utils\procinfo\lib;$(ProjectDir)..\src\shared\hlsdk\utils\procinfo\lib\win32_vc6;$(ProjectDir)..\src\shared\hlsdk\utils\qbsp2;$(ProjectDir)..\src\shared\hlsdk\utils\qcsg;$(ProjectDir)..\src\shared\hlsdk\utils\qlumpy;$(ProjectDir)..\src\shared\hlsdk\utils\qrad;$(ProjectDir)..\src\shared\hlsdk\utils\serverctrl;$(ProjectDir)..\src\shared\hlsdk\utils\serverctrl\res;$(ProjectDir)..\src\shared\hlsdk\utils\smdlexp;$(ProjectDir)..\src\shared\hlsdk\utils\sprgen;$(ProjectDir)..\src\shared\hlsdk\utils\studiomdl;$(ProjectDir)..\src\shared\hlsdk\utils\vgui;$(ProjectDir)..\src\shared\hlsdk\utils\vgui\include;$(ProjectDir)..\src\shared\hlsdk\utils\vgui\lib;$(ProjectDir)..\src\shared\hlsdk\utils\vgui\lib\win32_vc6;$(ProjectDir)..\src\shared\hlsdk\utils\visx2;$(ProjectDir)..\src\shared\hlsdk\utils\xwad;$(ProjectDir)..\src\shared\hlsdk\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CoFManager.cpp" />
+    <ClCompile Include="..\src\common\Memory.cpp" />
+    <ClCompile Include="..\src\Global.cpp" />
+    <ClCompile Include="..\src\precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\src\public\opcode_len_calc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CoFSDK.h" />
+    <ClInclude Include="..\src\common\Memory.h" />
+    <ClInclude Include="..\src\Global.h" />
+    <ClInclude Include="..\src\precompiled.h" />
+    <ClInclude Include="..\src\public\opcode_len_calc.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
