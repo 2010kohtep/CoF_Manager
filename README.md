@@ -28,3 +28,7 @@ The CoF Manager API is quite raw, most likely in the future it will be radically
 I can not be sure about the possibility of being banned by the VAC system, however, during the entire testing and development of CoF Manager, I did not receive a single ban. Moreover, there is not a single mention of VAC blocking in Cry of Fear on the Internet.
 
 If you in doubt, you can use the No-Steam version of the game.
+
+## How to compile?
+
+Use Visual Studio 2019 to compile the project.
