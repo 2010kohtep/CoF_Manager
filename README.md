@@ -18,7 +18,7 @@ For implementation in the game CoF Manager uses a feature of the client library,
 After start, CoF Manager loads all the libraries that are in the **cryoffear/addons** folder. If the library was successfully loaded, then CoF Manager calls the exported functions of the loaded mod to initialize it:
 
 * Init - a function in which entire mod initialization should take place. The arguments are the major and minor versions of the CoF Manager. The function returns bool - initialization result: true - initialization successful, false - initialization failed.
-* PluginInfo - a function that gives information about the mod. Mod information is plugin_info_t structure, which contains the name of the mod, the name of the developer, and version information.
+* GetPluginInfo - a function that gives information about the mod. Mod information is plugin_info_t structure, which contains the name of the mod, the name of the developer, and version information.
 * GetGameVars - a function in which CoF Manager sends the engine and mod data, which the addon can use to work with the mod.
 
 The CoF Manager API is quite raw, most likely in the future it will be radically redone.
