@@ -1,6 +1,8 @@
 #include "precompiled.h"
 
-void CDebug::OnFrame()
+CDebug gMgrDebug;
+
+void CDebug::OnFrame(double time)
 {
 	m_nCurrentLine = 0;
 }

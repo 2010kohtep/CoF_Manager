@@ -7,7 +7,7 @@ private:
 	int m_nCurrentLine;
 
 private:
-	virtual void OnFrame();
+	virtual void OnFrame(double time) override;
 
 public:
 	CDebug();

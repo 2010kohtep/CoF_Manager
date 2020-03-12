@@ -4,6 +4,8 @@ BOOL WINAPI DllMain(_In_ HINSTANCE hinstDLL, _In_ DWORD fdwReason, _In_ LPVOID l
 {
 	if (fdwReason == DLL_PROCESS_ATTACH)
 	{
+		ghInstance = hinstDLL;
+
 		GetModuleFileNameA(NULL, gszExeDir, sizeof(gszExeDir));
 		auto psz = strrchr(gszExeDir, '\\');
 		if (psz) *psz = '\0';

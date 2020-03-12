@@ -6,6 +6,8 @@
 #define COFMGR_VERSION_MAJOR 0
 #define COFMGR_VERSION_MINOR 1
 
+GLOBAL HMODULE ghInstance;
+
 GLOBAL cl_enginefunc_t *pEngine;
 GLOBAL cldll_func_t *pClient;
 GLOBAL cldll_func_t Client;

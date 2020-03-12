@@ -73,7 +73,7 @@ void InitModules()
 		if (m->pGetGameVars)
 			m->pGetGameVars(&gCoFData);
 
-		if (!m->pInit(COFMGR_VERSION_MAJOR, COFMGR_VERSION_MINOR))
+		if (!m->pInit(ghInstance, COFMGR_VERSION_MAJOR, COFMGR_VERSION_MINOR))
 		{
 			pEngine->Con_Printf("WARNING! Initialization failed for plugin %s.\n", m->pszName);
 			continue;
@@ -87,7 +87,6 @@ void InitModules()
 
 		m->bInited = true;
 	}
-
 }
 
 void ManagerFrame(double time)

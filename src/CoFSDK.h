@@ -31,7 +31,7 @@ struct cof_data_t
 	server_static_t *psvc;
 };
 
-using pfnInit_t = bool(*)(int nVerMajor, int nVerMinor);
+using pfnInit_t = bool(*)(HMODULE hManager, int nVerMajor, int nVerMinor);
 using pfnPluginInfo_t = void(*)(plugin_info_t **info);
 using pfnGetGameVars_t = void(*)(cof_data_t *cofdata);
 
@@ -45,6 +45,8 @@ struct IBase
 
 	virtual int GetVersion() { return 0; };
 };
+
+using pfnLocateInterface_t = IBase * (*)(const char *pszName);
 
 struct IDebug : IBase
 {
