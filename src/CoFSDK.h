@@ -1,5 +1,7 @@
 #pragma once
 
+#pragma region Basic Types
+
 struct plugin_info_t
 {
 	const char *pszName;
@@ -31,4 +33,27 @@ struct cof_data_t
 
 using pfnInit_t = bool(*)(int nVerMajor, int nVerMinor);
 using pfnPluginInfo_t = void(*)(plugin_info_t **info);
-using pfnGetGameVars = void(*)(cof_data_t *cofdata);
+using pfnGetGameVars_t = void(*)(cof_data_t *cofdata);
+
+#pragma endregion
+
+#pragma region Interfaces
+
+struct IBase
+{
+	virtual ~IBase() {}
+
+	virtual int GetVersion() { return 0; };
+};
+
+struct IDebug : IBase
+{
+	virtual int GetVersion() { return 1; }
+
+	virtual void Toggle(bool value) abstract;
+
+	virtual void NPrint(const char *fmt, ...) abstract;
+	virtual void NPrint() abstract;
+};
+
+#pragma endregion

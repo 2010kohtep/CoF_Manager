@@ -10,6 +10,12 @@
     <Filter Include="src\public">
       <UniqueIdentifier>{61664bad-65d3-4fdf-9ba9-58d2900e0c7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\sdk">
+      <UniqueIdentifier>{9c4e1806-e154-47ce-809b-6070f1f0382c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\manager">
+      <UniqueIdentifier>{df09ef6e-070a-477b-8700-0198f501ce0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\precompiled.cpp">
@@ -27,6 +33,18 @@
     <ClCompile Include="..\src\Global.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\sdk\Debug\CoF_Debug.cpp">
+      <Filter>src\sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GSPlugin.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\manager\Init.cpp">
+      <Filter>src\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\manager\Export.cpp">
+      <Filter>src\manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\precompiled.h">
@@ -43,6 +61,18 @@
     </ClInclude>
     <ClInclude Include="..\src\Global.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\Debug\CoF_Debug.h">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GSPlugin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\manager\Init.h">
+      <Filter>src\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\manager\Export.h">
+      <Filter>src\manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

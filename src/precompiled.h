@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <vector>
 
+#include "GSPlugin.h"
+
 #include "shared/hlsdk/dlls/extdll.h"
 
 #include "shared/hlsdk/cl_dll/wrect.h"
@@ -21,6 +23,7 @@
 #include "shared/hlsdk/engine/server_static.h"
 
 #include "public/opcode_len_calc.h"
+
 #include "common/Memory.h"
 
 struct client_static_t
@@ -31,4 +34,10 @@ struct client_static_t
 };
 
 #include "CoFSDK.h"
+
+#include "sdk/Debug/CoF_Debug.h"
+
 #include "Global.h"
+
+#include "manager/Init.h"
+#include "manager/Export.h"

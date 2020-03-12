@@ -145,6 +145,9 @@
     <ClCompile Include="..\src\CoFManager.cpp" />
     <ClCompile Include="..\src\common\Memory.cpp" />
     <ClCompile Include="..\src\Global.cpp" />
+    <ClCompile Include="..\src\GSPlugin.cpp" />
+    <ClCompile Include="..\src\manager\Export.cpp" />
+    <ClCompile Include="..\src\manager\Init.cpp" />
     <ClCompile Include="..\src\precompiled.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precompiled.h</PrecompiledHeaderFile>
@@ -152,13 +155,18 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precompiled.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="..\src\public\opcode_len_calc.cpp" />
+    <ClCompile Include="..\src\sdk\Debug\CoF_Debug.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\CoFSDK.h" />
     <ClInclude Include="..\src\common\Memory.h" />
     <ClInclude Include="..\src\Global.h" />
+    <ClInclude Include="..\src\GSPlugin.h" />
+    <ClInclude Include="..\src\manager\Export.h" />
+    <ClInclude Include="..\src\manager\Init.h" />
     <ClInclude Include="..\src\precompiled.h" />
     <ClInclude Include="..\src\public\opcode_len_calc.h" />
+    <ClInclude Include="..\src\sdk\Debug\CoF_Debug.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

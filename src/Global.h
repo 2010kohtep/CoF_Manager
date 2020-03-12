@@ -1,6 +1,7 @@
 #pragma once
 
 #define GLOBAL __declspec(selectany)
+#define EXPORT extern "C" __declspec(dllexport)
 
 #define COFMGR_VERSION_MAJOR 0
 #define COFMGR_VERSION_MINOR 1
@@ -45,7 +46,7 @@ struct cof_module_t
 
 	pfnInit_t pInit;
 	pfnPluginInfo_t pPluginInfo;
-	pfnGetGameVars pGetGameVars;
+	pfnGetGameVars_t pGetGameVars;
 };
 
 GLOBAL std::vector<cof_module_t *> gCofModules;

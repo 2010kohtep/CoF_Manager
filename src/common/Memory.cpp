@@ -474,3 +474,17 @@ HANDLE BeginThread(void *addr, void *arg)
 {
 	return CreateThread(NULL, 0, LPTHREAD_START_ROUTINE(addr), arg, 0, NULL);
 }
+
+void FindModule(const char *name, HMODULE &base, void *&end, unsigned int &size)
+{
+	base = nullptr;
+	end = nullptr;
+	size = 0;
+
+	base = GetModuleHandleA(name);
+	if (!base)
+		return;
+
+	size = GetModuleSize(base);
+	end = Transpose(base, size - 1);
+}

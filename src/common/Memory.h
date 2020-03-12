@@ -138,3 +138,4 @@ void Fill(void *addr, unsigned char data, int size);
 /********** Other **********/
 
 HANDLE BeginThread(void *addr, void *arg);
+void FindModule(const char *name, HMODULE &base, void *&end, unsigned int &size);
